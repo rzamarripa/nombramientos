@@ -1,4 +1,4 @@
-var issste = angular.module('issste', []);
+var issste = angular.module('issste', ['ui.select', 'ngSanitize']);
 
 issste.directive('validaForm', function validaForm () {
   return {
