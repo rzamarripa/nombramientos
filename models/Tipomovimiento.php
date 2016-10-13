@@ -36,7 +36,8 @@ class Tipomovimiento extends \yii\db\ActiveRecord
             [['codigo', 'estatus'], 'integer'],
             [['definicion'], 'string'],
             [['tipoMovimiento'], 'string', 'max' => 50],
-            [['movimientoEspecifico'], 'string', 'max' => 100]
+            [['movimientoEspecifico'], 'string', 'max' => 100],
+            [['codigo'], 'unique', 'message'=>'El {attribute} "{value}" ya existe']
         ];
     }
 

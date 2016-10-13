@@ -1,6 +1,6 @@
 <?php
 	use yii\helpers\Html;
-	$this->title = 'Tipos Movimiento Documentacion';
+	$this->title = 'Tipos Movimiento Documentación';
 ?>
 
 <div class="panel panel-default">
@@ -9,7 +9,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<h2>
-						<i class="icofont icofont icofont-company icon-title"><?= Html::encode($this->title) ?></i><?= Html::a('Crear Tipo Movimiento Documentacion', ['create'], ['class' => 'btn btn-primary pull-right']) ?>
+						<i class="icofont icofont icofont-company icon-title"><?= Html::encode($this->title) ?></i><?= Html::a('Crear Tipo Movimiento Documentación', ['create'], ['class' => 'btn btn-primary pull-right']) ?>
 						</h2>
 					</div>
 				</div>

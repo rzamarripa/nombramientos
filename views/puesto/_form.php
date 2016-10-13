@@ -59,14 +59,6 @@
                         <input class="form-control float-input" type="text" name="totalZEIII" ng-model="nuevo.totalZEIII" required>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>Tipo de Puesto*</label>
-                        <select class="form-control" name="tipoPuesto_id" ng-model="nuevo.tipoPuesto_id" required>
-                            <option ng-repeat="tipoPuesto in tiposPuesto" value="{{tipoPuesto.id}}">{{tipoPuesto.nombre}}</option>
-                        </select>
-                    </div>
-                </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">

@@ -7,6 +7,12 @@
 	window.controller = 'plaza';
 	window.action = 'actualizar';
 	window.nuevo = <?= json_encode($model->attributes) ?>;
+	window.unidadAdministrativa = <?= json_encode($unidadAdministrativa) ?>;
+	window.adscripcionPresupuestal = <?= json_encode($adscripcionPresupuestal) ?>;
+	window.adscripcionFisica = <?= json_encode($adscripcionFisica) ?>;
+	window.servicio = <?= json_encode($servicio) ?>;
+	window.turno = <?= json_encode($turno) ?>;
+	window.horario = <?= json_encode($horario) ?>;
 </script>
 <div ng-controller="UniversalCtrl">
     <h1><?= Html::encode($this->title) ?></h1>

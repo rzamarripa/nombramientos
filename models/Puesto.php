@@ -38,11 +38,12 @@ class Puesto extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['codigo', 'nivel', 'denominacion', 'sueldoZEII', 'compensacionZEII', 'totalZEII', 'sueldoZEIII', 'compensacionZEIII', 'totalZEIII', 'tipoPuesto_id', 'estatus'], 'required'],
+            [['codigo', 'nivel', 'denominacion', 'sueldoZEII', 'compensacionZEII', 'totalZEII', 'sueldoZEIII', 'compensacionZEIII', 'totalZEIII', 'estatus'], 'required'],
             [['sueldoZEII', 'compensacionZEII', 'totalZEII', 'sueldoZEIII', 'compensacionZEIII', 'totalZEIII'], 'number'],
-            [['tipoPuesto_id', 'estatus'], 'integer'],
+            [['estatus'], 'integer'],
             [['codigo', 'nivel'], 'string', 'max' => 15],
-            [['denominacion'], 'string', 'max' => 100]
+            [['denominacion'], 'string', 'max' => 100],
+            [['codigo'], 'unique', 'message'=>'El {attribute} "{value}" ya existe']
         ];
     }
 
@@ -62,7 +63,6 @@ class Puesto extends \yii\db\ActiveRecord
             'sueldoZEIII' => 'Sueldo Zeiii',
             'compensacionZEIII' => 'Compensacion Zeiii',
             'totalZEIII' => 'Total Zeiii',
-            'tipoPuesto_id' => 'Tipo Puesto ID',
             'estatus' => 'Estatus',
         ];
     }
@@ -72,6 +72,6 @@ class Puesto extends \yii\db\ActiveRecord
      */
     public function getTipoPuesto()
     {
-        return $this->hasOne(Tipopuesto::className(), ['id' => 'tipoPuesto_id']);
+        
     }
 }

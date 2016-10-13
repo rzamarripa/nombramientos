@@ -1,7 +1,7 @@
 <?php
     use yii\helpers\Html;
 ?>
-<div class="panel panel-default">
+<div class="panel panel-default" ng-cloak>
     <div class="panel-body">
         <form name="form" novalidate>
             <div class="row">
@@ -69,6 +69,102 @@
                     <div class="form-group">
                         <label>Tipo Tabulador*</label>
                         <input class="form-control" type="text" name="tipoTabulador" ng-model="nuevo.tipoTabulador"  maxlength="1" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Turno Opcional</label>
+                        <input class="form-control float-input" type="text" name="turnoOpcional" ng-model="nuevo.turnoOpcional">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Percepción Adicional</label>
+                        <input class="form-control float-input" type="text" name="percepcionOpcional" ng-model="nuevo.percepcionAdicional">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Riesgo Profesional</label>
+                        <input class="form-control float-input" type="text" name="riesgoProfesional" ng-model="nuevo.riesgoProfesional">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Unidad Administrativa*</label>
+                        <ui-select name="unidadAdministrativa_id" ng-model="nuevo.unidadAdministrativa_id" required>
+                          <ui-select-match>
+                              <span>{{$select.selected.codigo}}</span>
+                          </ui-select-match>
+                          <ui-select-choices repeat="ua.codigo as ua in unidadAdministrativa | filter: $select.search">
+                              <span>{{ua.codigo}}</span>
+                          </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Adscripción Presupuestal*</label>
+                        <ui-select name="adscripcionPresupuestal_id" ng-model="nuevo.adscripcionPresupuestal_id" required>
+                          <ui-select-match>
+                              <span>{{$select.selected.codigo}}</span>
+                          </ui-select-match>
+                          <ui-select-choices repeat="ap.codigo as ap in adscripcionPresupuestal | filter: $select.search">
+                              <span>{{ap.codigo}}</span>
+                          </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Adscripción Fisica*</label>
+                        <ui-select name="adscripcionFisica_id" ng-model="nuevo.adscripcionFisica_id" required>
+                          <ui-select-match>
+                              <span>{{$select.selected.codigo}}</span>
+                          </ui-select-match>
+                          <ui-select-choices repeat="af.codigo as af in adscripcionFisica | filter: $select.search">
+                              <span>{{af.codigo}}</span>
+                          </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Servicio*</label>
+                        <ui-select name="servicio_id" ng-model="nuevo.servicio_id" required>
+                          <ui-select-match>
+                              <span>{{$select.selected.codigo}}</span>
+                          </ui-select-match>
+                          <ui-select-choices repeat="s.codigo as s in servicio | filter: $select.search">
+                              <span>{{s.codigo}}</span>
+                          </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Horario*</label>
+                        <ui-select name="horario_id" ng-model="nuevo.horario_id" required>
+                          <ui-select-match>
+                              <span>{{$select.selected.codigo}}</span>
+                          </ui-select-match>
+                          <ui-select-choices repeat="h.id as h in horario | filter: $select.search">
+                              <span>{{h.codigo}}</span>
+                          </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Turno*</label>
+                        <ui-select name="turno_id" ng-model="nuevo.turno_id" required>
+                          <ui-select-match>
+                              <span>{{$select.selected.nombre}}</span>
+                          </ui-select-match>
+                          <ui-select-choices repeat="t.id as t in turno | filter: $select.search">
+                              <span>{{t.nombre}}</span>
+                          </ui-select-choices>
+                        </ui-select>
                     </div>
                 </div>
             </div>

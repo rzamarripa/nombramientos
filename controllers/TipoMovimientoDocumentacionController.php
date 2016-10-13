@@ -52,7 +52,7 @@ class TipomovimientodocumentacionController extends Controller
             if($model->save()){
                 echo json_encode(1);
             }else{
-                echo "<pre>"; print_r($model->errors);echo"</pre>";
+                echo json_encode($model->errors);
             }
         } else {
             return $this->render('create', [
@@ -80,7 +80,7 @@ class TipomovimientodocumentacionController extends Controller
             if($model->save()){
                 echo json_encode(1);
             }else{
-                echo "<pre>"; print_r($model->errors);echo"</pre>";
+                echo json_encode($model->errors);
             }
         } else {
             return $this->render('update', [

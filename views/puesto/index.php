@@ -24,7 +24,6 @@
 							<th>Codigo</th>
 							<th>Nivel</th>
 							<th>Denominación</th>
-							<th>Tipo Puesto</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -34,7 +33,6 @@
 								<td><?= $r->codigo ?></td>
 								<td><?= $r->nivel ?></td>
 								<td><?= $r->denominacion ?></td>
-								<td><?= $r->tipoPuesto->nombre ?></td>
 								<td align="center"><?= Html::a('<i class="icofont icofont-pencil-alt-5"><i>', ['update','id'=>$r->id], ['class' => 'btn btn-primary pull-right']) ?></td>
 							</tr>
 						<?php } ?>

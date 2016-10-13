@@ -31,7 +31,8 @@ class Adscripcionfisica extends \yii\db\ActiveRecord
         return [
             [['codigo', 'denominacion', 'estatus'], 'required'],
             [['codigo', 'estatus'], 'integer'],
-            [['denominacion'], 'string', 'max' => 100]
+            [['denominacion'], 'string', 'max' => 100],
+            [['codigo'], 'unique', 'message'=>'El {attribute} "{value}" ya existe']
         ];
     }
 

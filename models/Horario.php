@@ -35,7 +35,8 @@ class Horario extends \yii\db\ActiveRecord
         return [
             [['codigo', 'deInicio', 'aInicio', 'deFinal', 'aFinal', 'estatus'], 'required'],
             [['codigo', 'estatus'], 'integer'],
-            [['deInicio', 'aInicio', 'deFinal', 'aFinal'], 'string', 'max' => 10]
+            [['deInicio', 'aInicio', 'deFinal', 'aFinal'], 'string', 'max' => 10],
+            [['codigo'], 'unique', 'message'=>'El {attribute} "{value}" ya existe']
         ];
     }
 

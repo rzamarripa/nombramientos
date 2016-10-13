@@ -4,7 +4,6 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Puesto;
-use app\models\Tipopuesto;
 use app\models\PuestoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -46,18 +45,16 @@ class PuestoController extends Controller
     public function actionCreate()
     {
         $model = new Puesto();
-        $tiposPuesto = Tipopuesto::find()->where('estatus=1')->asArray()->all();
         if (Yii::$app->request->post()) {
             $model->attributes = $_POST['attributes'];
             if($model->save()){
                 echo json_encode(1);
             }else{
-                echo "<pre>"; print_r($model->errors);echo"</pre>";
+                echo json_encode($model->errors);
             }
         } else {
             return $this->render('create', [
-                'model' => $model,
-                'tiposPuesto' => $tiposPuesto,
+                'model' => $model
             ]);
         }
     }
@@ -65,10 +62,8 @@ class PuestoController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $tiposPuesto = Tipopuesto::find()->where('estatus=1')->asArray()->all();
         return $this->render('update', [
-            'model' => $model,
-            'tiposPuesto' => $tiposPuesto,
+            'model' => $model
         ]);
     }
 
@@ -80,7 +75,7 @@ class PuestoController extends Controller
             if($model->save()){
                 echo json_encode(1);
             }else{
-                echo "<pre>"; print_r($model->errors);echo"</pre>";
+                echo json_encode($model->errors);
             }
         } else {
             return $this->render('update', [

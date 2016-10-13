@@ -41,13 +41,13 @@ AppAsset::register($this);
             <li><?= Html::a('<i class="icofont icofont-first-aid-alt"></i> Adscripción Presupuestal', ['adscripcionpresupuestal/index']) ?></li>
             <li><?= Html::a('<i class="icofont icofont-table"></i> Servicios', ['servicio/index']) ?></li>
             <li><?= Html::a('<i class="icofont icofont-eclipse"></i> Turnos', ['turno/index']) ?></li>
-            <li><?= Html::a('<i class="icofont icofont-job-search"></i> Tipos Puesto', ['tipopuesto/index']) ?></li>
             <li><?= Html::a('<i class="icofont icofont-unity-hand"></i> Unidades Administrativas', ['unidadadministrativa/index']) ?>
             <li><?= Html::a('<i class="icofont icofont-calendar"></i> Horarios', ['horario/index']) ?>
             <li><?= Html::a('<i class="icofont icofont-company"></i> Puestos', ['puesto/index']) ?>
             <li><?= Html::a('<i class="icofont icofont-drag"></i> Tipos Movimiento', ['tipomovimiento/index']) ?>
             <li><?= Html::a('<i class="icofont icofont-drag"></i> Tipos Movimiento Documentación', ['tipomovimientodocumentacion/index']) ?>
             </li>
+            <li><?= Html::a('<i class="icofont icofont-list"></i> Plantillas Reales', ['plantillareal/index']) ?></li>
           </ul>
         </li>
         <?php } ?>

@@ -30,7 +30,8 @@ class Unidadadministrativa extends \yii\db\ActiveRecord
             [['codigo', 'denominacion', 'estatus'], 'required'],
             [['estatus'], 'integer'],
             [['codigo'], 'string', 'max' => 10],
-            [['denominacion'], 'string', 'max' => 100]
+            [['denominacion'], 'string', 'max' => 100],
+            [['codigo'], 'unique', 'message'=>'El {attribute} "{value}" ya existe']
         ];
     }
 

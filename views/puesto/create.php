@@ -8,7 +8,6 @@ $this->title = 'Crear Puesto';
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
 	window.controller = 'puesto';
 	window.action = 'create';
-	window.tiposPuesto = <?= json_encode($tiposPuesto) ?>;
 </script>
 
 <div ng-controller="UniversalCtrl">

@@ -5,6 +5,12 @@ namespace app\controllers;
 use Yii;
 use app\models\Plaza;
 use app\models\PlazaSearch;
+use app\models\Unidadadministrativa;
+use app\models\Adscripcionpresupuestal;
+use app\models\Adscripcionfisica;
+use app\models\Servicio;
+use app\models\Turno;
+use app\models\Horario;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
@@ -45,16 +51,28 @@ class PlazaController extends Controller
     public function actionCreate()
     {
         $model = new Plaza();
+        $unidadAdministrativa = Unidadadministrativa::find()->where('estatus=1')->asArray()->all();
+        $adscripcionPresupuestal = Adscripcionpresupuestal::find()->where('estatus=1')->asArray()->all();
+        $adscripcionFisica = Adscripcionfisica::find()->where('estatus=1')->asArray()->all();
+        $servicio = Servicio::find()->where('estatus=1')->asArray()->all();
+        $turno = Turno::find()->where('estatus=1')->asArray()->all();
+        $horario = Horario::find()->where('estatus=1')->asArray()->all();
         if (Yii::$app->request->post()) {
             $model->attributes = $_POST['attributes'];
             if($model->save()){
                 echo json_encode(1);
             }else{
-                echo "<pre>"; print_r($model->errors);echo"</pre>";
+                echo json_encode($model->errors);
             }
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'unidadAdministrativa' => $unidadAdministrativa,
+                'adscripcionPresupuestal' => $adscripcionPresupuestal,
+                'adscripcionFisica' => $adscripcionFisica,
+                'servicio' => $servicio,
+                'turno' => $turno,
+                'horario' => $horario,
             ]);
         }
     }
@@ -62,8 +80,20 @@ class PlazaController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $unidadAdministrativa = Unidadadministrativa::find()->where('estatus=1')->asArray()->all();
+        $adscripcionPresupuestal = Adscripcionpresupuestal::find()->where('estatus=1')->asArray()->all();
+        $adscripcionFisica = Adscripcionfisica::find()->where('estatus=1')->asArray()->all();
+        $servicio = Servicio::find()->where('estatus=1')->asArray()->all();
+        $turno = Turno::find()->where('estatus=1')->asArray()->all();
+        $horario = Horario::find()->where('estatus=1')->asArray()->all();
         return $this->render('update', [
             'model' => $model,
+            'unidadAdministrativa' => $unidadAdministrativa,
+            'adscripcionPresupuestal' => $adscripcionPresupuestal,
+            'adscripcionFisica' => $adscripcionFisica,
+            'servicio' => $servicio,
+            'turno' => $turno,
+            'horario' => $horario,
         ]);
     }
 
@@ -75,7 +105,7 @@ class PlazaController extends Controller
             if($model->save()){
                 echo json_encode(1);
             }else{
-                echo "<pre>"; print_r($model->errors);echo"</pre>";
+                echo json_encode($model->errors);
             }
         } else {
             return $this->render('update', [
