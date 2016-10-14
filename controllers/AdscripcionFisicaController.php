@@ -12,7 +12,7 @@ use yii\filters\AccessControl;
 /**
  * AdscripcionfisicaController implements the CRUD actions for Adscripcionfisica model.
  */
-class AdscripcionfisicaController extends Controller
+class AdscripcionFisicaController extends Controller
 {
     public function behaviors()
     {

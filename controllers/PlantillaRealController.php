@@ -12,7 +12,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 
-class PlantillarealController extends Controller
+class PlantillaRealController extends Controller
 {
     public function behaviors()
     {

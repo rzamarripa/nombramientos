@@ -10,7 +10,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 
-class TipomovimientodocumentacionController extends Controller
+class TipoMovimientoDocumentacionController extends Controller
 {
     public function behaviors()
     {

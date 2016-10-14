@@ -2,18 +2,16 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Crear Unidad Administrativa';
+$this->title = 'Crear Adscripcion Presupuesta';
 ?>
 <script type="text/javascript">
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
-	window.controller = 'unidadadministrativa';
+	window.controller = 'adscripcion-presupuestal';
 	window.action = 'create';
 </script>
 
 <div ng-controller="UniversalCtrl">
-  <h2>
-    <i class="icofont icofont-unity-hand icon-title"><?= Html::encode($this->title) ?></i>
-  </h2>
+  <h1><?= Html::encode($this->title) ?></h1>
   <hr>
   <?= $this->render('_form', [
       'model' => $model,

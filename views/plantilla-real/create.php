@@ -6,7 +6,7 @@ $this->title = 'Crear Plantilla Real';
 ?>
 <script type="text/javascript">
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
-	window.controller = 'plantillareal';
+	window.controller = 'plantilla-real';
 	window.action = 'create';
 	window.trabajador = <?= json_encode($trabajador) ?>;
 	window.servicio = <?= json_encode($servicio) ?>;

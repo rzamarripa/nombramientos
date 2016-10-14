@@ -2,11 +2,11 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Crear Tipo Movimiento';
+$this->title = 'Crear Adscripcion Fisica';
 ?>
 <script type="text/javascript">
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
-	window.controller = 'tipomovimiento';
+	window.controller = 'adscripcion-fisica';
 	window.action = 'create';
 </script>
 

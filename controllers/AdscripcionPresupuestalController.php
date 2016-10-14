@@ -12,7 +12,7 @@ use yii\filters\AccessControl;
 /**
  * AdscripcionpresupuestalController implements the CRUD actions for Adscripcionpresupuestal model.
  */
-class AdscripcionpresupuestalController extends Controller
+class AdscripcionPresupuestalController extends Controller
 {
     public function behaviors()
     {

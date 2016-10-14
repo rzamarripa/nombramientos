@@ -12,7 +12,7 @@ use yii\filters\AccessControl;
 /**
  * TipomovimientoController implements the CRUD actions for Tipomovimiento model.
  */
-class TipomovimientoController extends Controller
+class TipoMovimientoController extends Controller
 {
     public function behaviors()
     {

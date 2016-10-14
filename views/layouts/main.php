@@ -37,17 +37,17 @@ AppAsset::register($this);
           <ul class="dropdown-menu">
             <li><?= Html::a('<i class="icofont icofont-business-man"></i> Trabajadores', ['trabajadores/index']) ?></li>
             <li><?= Html::a('<i class="icofont icofont-building"></i> Plazas', ['plaza/index']) ?></li>
-            <li><?= Html::a('<i class="icofont icofont-first-aid-alt"></i> Adscripción Física', ['adscripcionfisica/index']) ?></li>
-            <li><?= Html::a('<i class="icofont icofont-first-aid-alt"></i> Adscripción Presupuestal', ['adscripcionpresupuestal/index']) ?></li>
+            <li><?= Html::a('<i class="icofont icofont-first-aid-alt"></i> Adscripción Física', ['adscripcion-fisica/index']) ?></li>
+            <li><?= Html::a('<i class="icofont icofont-first-aid-alt"></i> Adscripción Presupuestal', ['adscripcion-presupuestal/index']) ?></li>
             <li><?= Html::a('<i class="icofont icofont-table"></i> Servicios', ['servicio/index']) ?></li>
             <li><?= Html::a('<i class="icofont icofont-eclipse"></i> Turnos', ['turno/index']) ?></li>
-            <li><?= Html::a('<i class="icofont icofont-unity-hand"></i> Unidades Administrativas', ['unidadadministrativa/index']) ?>
+            <li><?= Html::a('<i class="icofont icofont-unity-hand"></i> Unidades Administrativas', ['unidad-administrativa/index']) ?>
             <li><?= Html::a('<i class="icofont icofont-calendar"></i> Horarios', ['horario/index']) ?>
             <li><?= Html::a('<i class="icofont icofont-company"></i> Puestos', ['puesto/index']) ?>
-            <li><?= Html::a('<i class="icofont icofont-drag"></i> Tipos Movimiento', ['tipomovimiento/index']) ?>
-            <li><?= Html::a('<i class="icofont icofont-drag"></i> Tipos Movimiento Documentación', ['tipomovimientodocumentacion/index']) ?>
+            <li><?= Html::a('<i class="icofont icofont-drag"></i> Tipos Movimiento', ['tipo-movimiento/index']) ?>
+            <li><?= Html::a('<i class="icofont icofont-drag"></i> Tipos Movimiento Documentación', ['tipo-movimiento-documentacion/index']) ?>
             </li>
-            <li><?= Html::a('<i class="icofont icofont-list"></i> Plantillas Reales', ['plantillareal/index']) ?></li>
+            <li><?= Html::a('<i class="icofont icofont-list"></i> Plantillas Reales', ['plantilla-real/index']) ?></li>
           </ul>
         </li>
         <?php } ?>

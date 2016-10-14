@@ -4,7 +4,7 @@
 ?>
 <script type="text/javascript">
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
-	window.controller = 'unidadadministrativa';
+	window.controller = 'tipomo-vimiento';
 	window.action = 'actualizar';
 	window.nuevo = <?= json_encode($model->attributes) ?>;
 </script>

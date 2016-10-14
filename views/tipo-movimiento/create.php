@@ -2,13 +2,12 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Crear Tipo Movimiento Documentación';
+$this->title = 'Crear Tipo Movimiento';
 ?>
 <script type="text/javascript">
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
-	window.controller = 'tipomovimientodocumentacion';
+	window.controller = 'tipomo-vimiento';
 	window.action = 'create';
-	window.tiposMovimiento = <?= json_encode($tiposMovimiento) ?>;
 </script>
 
 <div ng-controller="UniversalCtrl">

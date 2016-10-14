@@ -9,7 +9,7 @@ $this->title = 'Acutalizar: ' . $model->id;
 ?>
 <script type="text/javascript">
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
-	window.controller = 'tipomovimientodocumentacion';
+	window.controller = 'tipo-movimiento-documentacion';
 	window.action = 'actualizar';
 	window.nuevo = <?= json_encode($model->attributes); ?>;
 	window.nuevo.codigoTipoMovimiento_id = window.nuevo.codigoTipoMovimiento_id.toString();

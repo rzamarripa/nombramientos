@@ -4,7 +4,7 @@
 ?>
 <script type="text/javascript">
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
-	window.controller = 'adscripcionpresupuestal';
+	window.controller = 'unidad-administrativa';
 	window.action = 'actualizar';
 	window.nuevo = <?= json_encode($model->attributes) ?>;
 </script>

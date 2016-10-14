@@ -12,7 +12,7 @@ use yii\filters\AccessControl;
 /**
  * UnidadadministrativaController implements the CRUD actions for Unidadadministrativa model.
  */
-class UnidadadministrativaController extends Controller
+class UnidadAdministrativaController extends Controller
 {
     public function behaviors()
     {

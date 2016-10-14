@@ -2,12 +2,13 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Crear Adscripcion Fisica';
+$this->title = 'Crear Tipo Movimiento Documentación';
 ?>
 <script type="text/javascript">
 	window.base_url = '<?= Yii::$app->request->baseUrl ?>';
-	window.controller = 'adscripcionfisica';
+	window.controller = 'tipo-movimiento-documentacion';
 	window.action = 'create';
+	window.tiposMovimiento = <?= json_encode($tiposMovimiento) ?>;
 </script>
 
 <div ng-controller="UniversalCtrl">
